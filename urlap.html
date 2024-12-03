@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Űrlap</title>
+		<meta charset="utf-8"/>
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Felmérés</h1>
+		</header>
+		<section>
+			<form>
+				<fieldset>
+					<legend>Adatok</legend>
+					<p><label>Név: <input type="text" name="nev" id="nev" autofocus></label></p>
+					<p><label>Születési év: <input id="szuletesi_datum" type="date" name="szulnev" min="1900" max="2015"></label></p>
+				</fieldset>	
+				<fieldset>
+					<legend>Orientációk</legend>
+					<p>Milyen közlekedési eszközt választanál szívesebben?</p>
+					<input type="radio" name="kozlekedes" value="autó" id="auto" checked>
+					<label for="auto">Autó</label>
+					<input type="radio" name="kozlekedes" value="busz" id="busz">
+					<label for="busz">Busz</label>
+					<input type="radio" name="kozlekedes" value="bicikli" id="bicikli">
+					<label for="bicikli">Bicikli</label>
+					<input type="radio" name="kozlekedes" value="roller" id="roller">
+					<label for="roller">Roller</label>
+					
+					<p>Hova utaznál szívesen? Többet is bejelölhetsz!</p>
+					<input type="checkbox" name="utazas" value="tengerpart" id="tengerpart">
+					<label for="tengerpart">Tengerpart</label>
+					<input type="checkbox" name="utazas" value="hegyek" id="hegyek">
+					<label for="hegyek">Hegyek</label>
+					<input type="checkbox" name="utazas" value="kastély-körút" id="kastely">
+					<label for="kastely">Kastély-körút</label>
+					<input type="checkbox" name="utazas" value="biciklitúra" id="biciklitura">
+					<label for="biciklitura">Biciklitúra</label>
+					
+					<p>Mit szeretsz leginkább csinálni? Többet is bejelölhetsz!</p>
+					<select id="erdeklodes" multiple>
+						<optgroup label="beltéri">
+							<option value="szinhaz">színházba járni</option>
+							<option value="mozi">moziba járni</option>
+							<option value="olvasas">olvasni</option>
+							<option value="pc">számítógépen játszani</option>
+						</optgroup>
+						<optgroup label="kültéri">
+							<option value="kirandulas">kirándulni</option>
+							<option value="kocogas">kocogni</option>
+						</optgroup>
+					</select>
+					
+					<p>Kedvenc színed</p>
+					<input id="szin" type="color">
+				</fieldset>
+				<br>
+				<button type="button" onclick="kiertekeles()">Elküldés</button>
+			</form>
+			<h2>Kiértékelés</h2>
+			<p id="valaszok"></p>
+		</section>
+		<footer>
+		</footer>
+	</body>
+</html>
